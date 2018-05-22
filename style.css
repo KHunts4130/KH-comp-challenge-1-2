@@ -1,0 +1,306 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns:  repeat(5, 1fr);
+  grid-auto-rows: minmax(16.7rem, auto);
+  grid-template-areas: 
+    "box1 box1 box2 box9 box9"
+    "box3 box4 box5 box9 box9"
+    "box6 box7 box8 box9 box9";
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.box {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+  display: block;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.box:hover {
+  color: transparent;
+}
+
+.box:hover img {
+  display: none;
+}
+
+img {
+  height: 75px;
+  margin-top: 25%;
+}
+
+.arrow-button {
+  background-color: Transparent;
+  background-position: center;
+  border-radius: 50%;
+  height: 50px;
+  outline: none;
+  width: 50px;
+}
+
+.arrow-button-container {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.left-arrow {
+  background-image: url(images/next-page-left.png);
+  margin-left: 20px;
+}
+
+.right-arrow {
+  background-image: url(images/next-page-right.png);
+  margin-right: 20px;
+}
+
+.box1 {
+  align-items: center;
+  background-color: #3DBB7C;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+  display: block;
+  grid-area: box1;
+  height: 100%;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+
+.box2 {
+  background-color: #FD9D27;
+  grid-area: box2;
+}
+
+.box2:hover {
+  background-image: url(images/colosus.jpg);
+}
+
+.box3 {
+  background-color: #278CC2;
+  grid-area: box3;
+}
+
+.box3:hover {
+  background-image: url(images/cable-deadpool.jpg);
+}
+
+.box4 {
+  background-color: #EF5B4E;
+  grid-area: box4;
+}
+
+.box4:hover {
+  background-image: url(images/peter-skydive.jpg);
+}
+
+.box5 {
+  background-color: #3DBB7C;
+  grid-area: box5;
+}
+
+.box5:hover {
+  background-image: url(images/domino-cutout.png);
+}
+
+.box6 {
+  background-color: #F66932;
+  grid-area: box6;
+}
+
+.box6:hover {
+  background-image: url(images/flames.jpg);
+}
+
+.box7 {
+  background-color: #278CC2;
+  grid-area: box7;
+}
+
+.box7:hover {
+  background-image: url(images/negasonic.jpeg);
+}
+
+.box8 {
+  background-color: #F66932;
+  grid-area: box8;
+}
+
+.box8:hover {
+  background-color: #FFFFFF;
+  background-image: url(images/aprove_this_shit.png);
+}
+
+.box9 {
+  background-color: #9e9e9e;
+  background-image: url(images/dead-nuke.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  grid-area: box9;
+  justify-content: space-between;
+  position: relative;
+}
+
+.carasel-button-container {
+  align-items: center;
+  display: flex;
+  height: 20px;
+  margin: .4em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.carasel {
+  border-radius: 50%;
+  border: none;
+  height: 15px;
+  margin-left: 5px;
+  outline: none;
+}
+
+.carasel-two {
+  background-color: grey;
+}
+
+.carasel-three {
+  background-color: grey;
+}
+
+.button-container {
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  display: inline;
+  font-size: 16px;
+  height: 55px;
+  margin: auto;
+  width: 150px;
+}
+
+.kill-list-container {
+  background-image: url(images/icon-submachine.png);
+  background-position: 15px 12px;
+  background-repeat: no-repeat;
+  margin-right: 60px;
+}
+
+.contracts-container {
+  background-image: url(images/icon-knife.png);
+  background-position: 6px 9px;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+    grid-auto-rows: minmax(16.7rem, auto);
+    grid-template-areas: 
+      "box9 box9 box9"
+      "box1 box1 box2"
+      "box3 box4 box5"
+      "box6 box7 box8";
+  }
+  button {
+    display: none;
+  }
+
+  .box9 {
+    background-image: url(images/deadpool_sexy.png);
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    grid-auto-rows: minmax(16.7rem, auto);
+    grid-template-areas: 
+      "box9 box9 "
+      "box1 box2"
+      "box3 box4"
+      "box6 box5"
+      "box7 box8";
+  }
+
+  .button-container {
+    background-position: 30px;
+    border: none;
+    color: transparent;
+    height: 45px;
+    margin: 0 0 4px 0;
+    outline: none;
+    width: 100px;
+  }
+
+  .kill-list-container {
+    background-image: url(images/icon-submachine50.png);
+  }
+
+  .contracts-container {
+    background-image: url(images/icon-knife50.png);
+  }
+
+  p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .box9 {
+    background-image: url(images/domino-fireplace.jpg);
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns:  repeat(1, 1fr);
+    grid-auto-rows: minmax(16.7rem, auto);
+    grid-template-areas: 
+      "box9"
+      "box1"
+      "box2"
+      "box3"
+      "box4"
+      "box5"
+      "box6"
+      "box7"
+      "box8";
+  }
+
+  .button-container {
+    margin-top: 30px;
+  }
+
+  .box9 {
+    background-image: url(images/deadpool-flames.jpg);
+  }
+}
+
+
+
+
